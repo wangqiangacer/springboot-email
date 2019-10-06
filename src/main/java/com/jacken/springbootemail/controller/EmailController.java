@@ -39,4 +39,15 @@ public class EmailController {
         emailService.sendAttachmentEmail(emailConfig.getEmailTo(),emailConfig.getEmailTitle(),emailConfig.getEmailContent(),file);
         return "Attachmentmail send  success  !!!";
     }
+
+    /**
+     * 发送模板文件
+     * @return
+     */
+    @RequestMapping("/sendTemplate")
+    @ResponseBody
+    public  String sendTemplateEmail(){
+        emailService.sendTemplateEmail(emailConfig.getEmailTo(),emailConfig.getEmailTitle(),"info.html");
+        return "template send success ";
+    }
 }

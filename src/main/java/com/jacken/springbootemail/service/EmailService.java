@@ -19,4 +19,12 @@ public interface EmailService {
      * @param file
      */
     void sendAttachmentEmail(String sendTo, String title, String content, File file);
+
+    /**
+     * 发送模板邮件
+     * @param sendTo
+     * @param title
+     * @param info
+     */
+    void sendTemplateEmail(String sendTo, String title,String info);
 }
